@@ -1,263 +1,133 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>웹 페이지 제목</title>
-  <meta name="description" content="웹 페이지 설명">
-  <meta name="keywords" content="웹 페이지 키워드1, 웹 페이지 키워드2, 웹 페이지 키워드3">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <style>
-    /* 전역 스타일 */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* 헤더 */
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: #333;
-      text-decoration: none;
-      padding: 20px 50px;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav li {
-      margin-left: 24px;
-    }
-    nav li:first-child {
-      margin-left: 0;
-    }
-    nav a {
-      color: #333;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      padding: 16px;
-    }
-    nav a:hover {
-      color: #007bff;
-    }
-
-    /* 메인 */
-    main {
-      margin: 40px auto;
-      max-width: 960px;
-      padding: 0 20px;
-    }
-    .section-title {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 32px;
-    }
-    .section-intro {
-      margin-bottom: 48px;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #777;
-    }
-    .card-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-    .card {
-      width: 100%;
-      max-width: 400px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      box
-    }
-    .card-image {
-      width: 100%;
-      height: 200px;
-      background-image: url('card-image.jpg');
-      background-position: center;
-      background-size: cover;
-    }
-    .card-content {
-      padding: 24px;
-    }
-    .card-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-    .card-text {
-      font-size: 16px;
-      color: #777;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
-    .card-link {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-    .card-link:hover {
-      background-color: #0069d9;
-    }
-
-    /* 푸터 */
-    footer {
-      background-color: #007bff;
-      color: #fff;
-      text-align: center;
-      padding: 16px;
-    }
-    footer p {
-      margin: 0;
-    }
-
-    /* 미디어 쿼리 */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-      nav a.menu {
-        display: block;
-        margin-left: auto;
-      }
-      nav.active ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 16px;
-      }
-      nav.active li {
-        margin-left: 0;
-        margin-bottom: 16px;
-      }
-    }
-  </style>
+  <title>My Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <a href="#" class="logo">로고</a>
-    <nav>
-      <ul>
-        <li><a href="#">메뉴1</a></li>
-        <li><a href="#">메뉴2</a></li>
-        <li><a href="#">메뉴3</a></li>
-        <li><a href="#">메뉴4</a></li>
-      </ul>
-      <a href="#" class="menu">&#9776;</a>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="My Website" width="150">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <main>
-    <section>
-      <h2 class="section-title">첫 번째 섹션</h2>
-      <p class="section-intro">첫 번째 섹션의 소개글입니다.</p>
-      <div class="card-wrapper">
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-content">
-            <h3 class="card-title">카드 제목1</h3>
-            <p class="card-text">카드 내용1입니다.</p>
-            <a href="#" class="card-link">더 보기</a>
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img src="feature1.jpg" alt="Feature 1" class="img-fluid">
           </div>
-        </div>
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-content">
-            <h3 class="card-title">카드 제목2</h3>
-                       <p class="card-text">카드 내용2입니다.</p>
-            <a href="#" class="card-link">더 보기</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-content">
-            <h3 class="card-title">카드 제목3</h3>
-            <p class="card-text">카드 내용3입니다.</p>
-            <a href="#" class="card-link">더 보기</a>
+          <div class="col-md-6">
+            <h2 class="text-primary mb-4">Our Services</h2>
+            <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, sem vel efficitur bibendum, erat nisl hendrerit nisl, vitae rhoncus nisi risus vel justo.</p>
+            <ul class="list-unstyled mb-4">
+              <li><i class="fas fa-check mr-2"></i>Web Design</li>
+              <li><i class="fas fa-check mr-2"></i>Web Development</li>
+              <li><i class="fas fa-check mr-2"></i>E-Commerce</li>
+              <li><i class="fas fa-check mr-2"></i>SEO Optimization</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="section-title">두 번째 섹션</h2>
-      <p class="section-intro">두 번째 섹션의 소개글입니다.</p>
-      <div class="card-wrapper">
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-content">
-            <h3 class="card-title">카드 제목4</h3>
-            <p class="card-text">카드 내용4입니다.</p>
-            <a href="#" class="card-link">더 보기</a>
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-primary mb-4">
+          </div>
+          <div class="col-md-6">
+            <img src="feature2.jpg" alt="Feature 2" class="img-fluid">
           </div>
         </div>
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-content">
-            <h3 class="card-title">카드 제목5</h3>
-            <p class="card-text">카드 내용5입니다.</p>
-            <a href="#" class="card-link">더 보기</a>
+      </div>
+    </section>
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img src="portfolio1.jpg" alt="Portfolio 1" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-primary mb-4">Our Portfolio</h2>
+            <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, sem vel efficitur bibendum, erat nisl hendrerit nisl, vitae rhoncus nisi risus vel justo.</p>
+            <a href="#" class="btn btn-primary">View Portfolio</a>
           </div>
         </div>
-        <div class="card">
-          <div class="card-image"></div>
-          <div class="card-content">
-            <h3 class="card-title">카드 제목6</h3>
-            <p class="card-text">카드 내용6입니다.</p>
-            <a href="#" class="card-link">더 보기</a>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-primary mb-4">Contact Us</h2>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <img src="contact.jpg" alt="Contact" class="img-fluid">
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer>
-    <p>저작권 © 2023. Company Name. All rights reserved.</p>
+  <footer class="bg-dark text-white">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2023 My Website</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled mb-0">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
-  <script>
-    const menuButton = document.querySelector('.menu');
-    const navList = document.querySelector('nav ul');
-
-    menuButton.addEventListener('click', () => {
-      navList.classList.toggle('active');
-    });
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
