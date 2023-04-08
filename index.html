@@ -1,133 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Website</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
+	<title>My Website</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		section {
+			margin-top: 50px;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		h2 {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin: 20px 0;
+		}
+
+		.col {
+			width: calc(50% - 10px);
+			background-color: #fff;
+			padding: 20px;
+			margin-bottom: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+
+		.col:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+		}
+
+		.col img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+
+		.col h3 {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		.col p {
+			font-size: 14px;
+			margin-bottom: 10px;
+			line-height: 1.5;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+
+		.btn:hover {
+			background-color: #fff;
+			color: #333;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		}
+	</style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" alt="My Website" width="150">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <img src="feature1.jpg" alt="Feature 1" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <h2 class="text-primary mb-4">Our Services</h2>
-            <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, sem vel efficitur bibendum, erat nisl hendrerit nisl, vitae rhoncus nisi risus vel justo.</p>
-            <ul class="list-unstyled mb-4">
-              <li><i class="fas fa-check mr-2"></i>Web Design</li>
-              <li><i class="fas fa-check mr-2"></i>Web Development</li>
-              <li><i class="fas fa-check mr-2"></i>E-Commerce</li>
-              <li><i class="fas fa-check mr-2"></i>SEO Optimization</li>
-            </ul>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="text-primary mb-4">
-          </div>
-          <div class="col-md-6">
-            <img src="feature2.jpg" alt="Feature 2" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <img src="portfolio1.jpg" alt="Portfolio 1" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <h2 class="text-primary mb-4">Our Portfolio</h2>
-            <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, sem vel efficitur bibendum, erat nisl hendrerit nisl, vitae rhoncus nisi risus vel justo.</p>
-            <a href="#" class="btn btn-primary">View Portfolio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="text-primary mb-4">Contact Us</h2>
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <img src="contact.jpg" alt="Contact" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="bg-dark text-white">
-    <div class="container">
-      <div class="row py-4">
-        <div class="col-md-6">
-          <p class="mb-0">&copy; 2023 My Website</p>
-        </div>
-        <div class="col-md-6 text-md-right">
-          <ul class="list-unstyled mb-0">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<div class="container">
+		<section>
+			<h2>Our Products</h2>
+			<div class="row">
+				<div class="col">
+					<img src="product1.jpg" alt="Product 1">
+					<h3>Product 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum mi et dui rhoncus, at interdum nulla bibendum.</p>
+					<a href="#" class="btn">Learn More</a>
+				</div>
+				<div class="col">
+					<img src="product2.jpg" alt="Product 2">
+					<h3>Product 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum mi et dui rhoncus, at interdum nulla bibendum.</p>
+					<a href="#" class="btn">Learn More</a>
+				</div>
+			</div>
+					<a href="#">Products</a>
+		<a href="#">Services</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+	</nav>
+
+	<div class="container">
+		<h1>Welcome to My Website</h1>
+
+		<div class="info">
+			<div class="info-box">
+				<img src="https://via.placeholder.com/400x300" alt="Image 1">
+				<h2>Information Box 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+				<a href="#" class="btn">Learn More</a>
+			</div>
+
+			<div class="info-box">
+				<img src="https://via.placeholder.com/400x300" alt="Image 2">
+				<h2>Information Box 2</h2>
+				<p>Proin eu wisi suscipit nulla suscipit interdum. Aliquam in lorem sit amet leo accumsan lacinia. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Donec ac quam.</p>
+				<a href="#" class="btn">Learn More</a>
+			</div>
+
+			<div class="info-box">
+				<img src="https://via.placeholder.com/400x300" alt="Image 3">
+				<h2>Information Box 3</h2>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+				<a href="#" class="btn">Learn More</a>
+			</div>
+
+			<div class="info-box">
+				<img src="https://via.placeholder.com/400x300" alt="Image 4">
+				<h2>Information Box 4</h2>
+				<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<a href="#" class="btn">Learn More</a>
+			</div>
+
+			<div class="info-box">
+				<img src="https://via.placeholder.com/400x300" alt="Image 5">
+				<h2>Information Box 5</h2>
+				<p>Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. In rutrum. Sed ac dolor sit amet purus malesuada congue. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.</p>
+				<a href="#" class="btn">Learn More</a>
+			</div>
+
+			<div class="info-box">
+				<img src="https://via.placeholder.com/400x300" alt="Image 6">
+				<h2>Information Box 6</h2>
+				<p>Aliquam erat volutpat. Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Nulla facilisi. Ut fringilla.</p>
+				<a href="#" class="btn">Learn More</a>
+			</nav>
+	<div class="container">
+		<h1>Welcome to my website</h1>
+		<div class="info">
+			<div class="info-box">
+				<img src="https://picsum.photos/400/300" alt="Image 1">
+				<h2>First Info Box</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada lobortis enim, non facilisis justo faucibus id. Curabitur lacinia magna eu ultrices bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+			<div class="info-box">
+				<img src="https://picsum.photos/400/300" alt="Image 2">
+				<h2>Second Info Box</h2>
+				<p>Nulla facilisi. Donec eu tellus eros. Duis ultricies turpis ut fringilla luctus. Vivamus in faucibus odio. Phasellus ac nibh vel quam vehicula congue id eu sapien. Nam sodales felis nec dolor bibendum, at venenatis sapien commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+			<div class="info-box">
+				<img src="https://picsum.photos/400/300" alt="Image 3">
+				<h2>Third Info Box</h2>
+				<p>Etiam et mauris metus. Praesent ultricies lacinia massa, quis faucibus velit fermentum eu. Pellentesque sed dui tincidunt, iaculis libero vel, finibus ipsum. Ut viverra quam ac nunc dictum, sed dapibus dolor pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+			<div class="info-box">
+				<img src="https://picsum.photos/400/300" alt="Image 4">
+				<h2>Fourth Info Box</h2>
+				<p>Donec bibendum est in est malesuada vestibulum. Curabitur vel dui viverra, hendrerit dolor sit amet, vestibulum felis. Vestibulum in quam turpis. In mollis odio sed libero vehicula, nec suscipit mi iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<a href="#" class="btn">Read More</a>
+			</div>
+			<div class="info-box">
+				<img src="https://picsum.photos/400/300" alt="Image 5">
+				<h2>Fifth Info Box</h2>
+				<p>Proin quis augue nec orci volutpat mattis at et mauris. Praesent eget bibendum nulla. Nulla facilisi. Maecenas laoreet commodo sapien, eu pulvinar felis fermentum sed.
+		</div>
+		<div class="info-box">
+			<img src="https://via.placeholder.com/300x200.png?text=Image+3" alt="Image 3">
+			<h2>Info Box 3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat euismod ex vel convallis. Vestibulum sit amet venenatis nulla. Praesent aliquet auctor nisl, id malesuada turpis pharetra quis. Aenean gravida auctor massa eget consequat. Morbi a magna rhoncus, ullamcorper lorem vitae, cursus ex. Duis sagittis laoreet arcu, quis mollis metus semper et. Suspendisse potenti. Sed vel erat luctus, lacinia risus vitae, molestie nulla.</p>
+			<a href="#" class="btn">Read More</a>
+		</div>
+		<div class="info-box">
+			<img src="https://via.placeholder.com/300x200.png?text=Image+4" alt="Image 4">
+			<h2>Info Box 4</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat euismod ex vel convallis. Vestibulum sit amet venenatis nulla. Praesent aliquet auctor nisl, id malesuada turpis pharetra quis. Aenean gravida auctor massa eget consequat. Morbi a magna rhoncus, ullamcorper lorem vitae, cursus ex. Duis sagittis laoreet arcu, quis mollis metus semper et. Suspendisse potenti. Sed vel erat luctus, lacinia risus vitae, molestie nulla.</p>
+			<a href="#" class="btn">Read More</a>
+		</div>
+	</div>
 </body>
 </html>
+
