@@ -6,7 +6,6 @@
 	<style>
 		body {
 			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
 			margin: 0;
 			padding: 0;
 		}
@@ -15,7 +14,7 @@
 			max-width: 800px;
 			margin: 0 auto;
 			padding: 20px;
-			background-color: #ffffff;
+			background: linear-gradient(to bottom, #ffffff, #f2f2f2);
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 		}
 
@@ -38,13 +37,11 @@
 			font-weight: bold;
 		}
 
-		ul, ol {
-			margin-left: 20px;
-			margin-bottom: 10px;
-		}
-
 		.section {
 			margin-bottom: 40px;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 		}
 
 		.section-title {
@@ -54,6 +51,14 @@
 
 		.section-content {
 			color: #555555;
+		}
+
+		.section:nth-child(even) {
+			background-color: #f7f7f7;
+		}
+
+		.section:nth-child(odd) {
+			background-color: #eaeaea;
 		}
 
 		.additional-info {
@@ -89,8 +94,6 @@
 				<img class="issue-image" src="path/to/your-image.jpg" alt="사회 문제 이미지">
 				<h2 class="section-title">사회 문제 제목</h2>
 				<p class="section-content">이번 주제는 '빈곤과 소득 불평등'입니다. 빈곤 문제와 소득 불평등에 대한 정보를 공유하고 해결 방안을 모색해봅시다.</p>
-			</section>
-
 							<section class="section">
 					<h2 class="section-title">문제 설명</h2>
 					<p class="section-content">빈곤과 소득 불평등은 현대 사회에서 여전히 심각한 문제입니다. 이에 대한 주요 요인과 영향을 알아보고, 그에 따른 해결 방법을 탐구합니다.</p>
@@ -123,4 +126,3 @@
 		</div>
 	</body>
 </html>
-
