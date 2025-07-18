@@ -2,19 +2,36 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 Control</title>
+  <title>도어락 비밀번호 입력</title>
 </head>
 <body>
-  <h2>GPIO 제어</h2>
-  <button onclick="sendCommand('ON')">ON (GPIO 21)</button>
-  <button onclick="sendCommand('OFF')">OFF (GPIO 22)</button>
+  <h2>도어락 비밀번호 입력</h2>
+  <input type="text" id="passwordInput" placeholder="비밀번호 입력">
+  <button onclick="checkPassword()">열기</button>
 
   <script>
-    function sendCommand(state) {
-      fetch(`http://172.30.1.97/control?state=${state}`)
+    const esp32ServerUrl = "http://172.30.1.97"; // ESP32 IP 주소
+
+    function checkPassword() {
+      const pw = document.getElementById("passwordInput").value;
+
+      fetch(`${esp32ServerUrl}/check?password=${encodeURIComponent(pw)}`)
+      .then(response => {
+        if (!response.ok) throw new Error("비밀번호 불일치");
+        return response.text();
+      })
+      .then(data => {
+        if (data === "OK") {
+          alert("비밀번호 맞음! 도어락 열기 신호 전송 중...");
+          // 비밀번호 맞으면 도어락 열기 요청 보내기
+          return fetch(`${esp32ServerUrl}/control?state=ON`);
+        } else {
+          throw new Error("비밀번호 틀림");
+        }
+      })
       .then(response => response.text())
-      .then(data => alert("서버 응답: " + data))
-      .catch(err => alert("에러 발생: " + err));
+      .then(data => alert("ESP32 응답: " + data))
+      .catch(err => alert("오류: " + err.message));
     }
   </script>
 </body>
