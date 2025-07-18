@@ -2,23 +2,19 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 제어</title>
+  <title>ESP32 Control</title>
 </head>
 <body>
-  <h1>ESP32 LED 제어</h1>
-  <button onclick="sendSignal('on')">LED ON</button>
-  <button onclick="sendSignal('off')">LED OFF</button>
+  <h2>GPIO 제어</h2>
+  <button onclick="sendCommand('ON')">ON (GPIO 21)</button>
+  <button onclick="sendCommand('OFF')">OFF (GPIO 22)</button>
 
   <script>
-    function sendSignal(signal) {
-      fetch('http://ESP32_IP_ADDRESS/control?state=' + signal)
-        .then(response => {
-          if (response.ok) {
-            alert(signal.toUpperCase() + ' 명령 전송 완료!');
-          } else {
-            alert('ESP32 연결 실패');
-          }
-        });
+    function sendCommand(state) {
+      fetch(`https://your-server-url/control?state=${state}`)
+      .then(response => response.text())
+      .then(data => alert("서버 응답: " + data))
+      .catch(err => alert("에러 발생: " + err));
     }
   </script>
 </body>
