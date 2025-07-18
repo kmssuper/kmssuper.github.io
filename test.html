@@ -11,7 +11,7 @@
 
   <script>
     function sendCommand(state) {
-      fetch(`https://your-server-url/control?state=${state}`)
+      fetch(`http://http://172.30.1.97//control?state=${state}`)
       .then(response => response.text())
       .then(data => alert("서버 응답: " + data))
       .catch(err => alert("에러 발생: " + err));
